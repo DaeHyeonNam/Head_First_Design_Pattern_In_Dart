@@ -15,10 +15,10 @@ class CurrentConditionsDisplay implements Observer, DisplayElement {
   }
 
   @override
-  void update(double temp, double humidity, double pressure) {
-    this.temp = temp;
-    this.humidity = humidity;
-    this.pressure = pressure;
+  void update() {
+    this.temp = weatherData.temp;
+    this.humidity = weatherData.humidity;
+    this.pressure = weatherData.pressure;
 
     display();
   }
